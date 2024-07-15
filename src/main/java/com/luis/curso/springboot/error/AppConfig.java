@@ -1,0 +1,24 @@
+package com.luis.curso.springboot.error;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.luis.curso.springboot.error.models.domain.User;
+
+@Configuration
+public class AppConfig {
+
+	@Bean
+	List<User> users() {
+		List<User> users = new ArrayList<>();
+		users.add(new User(1L, "Pepe", "Gonzalez"));
+		users.add(new User(2L, "Andrez", "Mena"));
+		users.add(new User(3L, "Maria", "Perez"));
+		users.add(new User(4L, "Josefa", "Ramires"));
+		users.add(new User(5L, "Ale", "Gutierrez"));
+		return users;
+	}
+}
